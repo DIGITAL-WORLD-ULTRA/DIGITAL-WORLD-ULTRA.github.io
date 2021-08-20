@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRELOADER</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .preloader{
+            height: 100vh;
+            width: 100vw;
+            background: black;
+        }
+        .loader{
+            position: relative;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 25px solid #21ebff;
+            animation: border 1s linear infinite;
+        }
+        .load-pic{
+            height: 100%;
+            width: 100%;
+            background: url(./favicon.ico);
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            animation: jump-in ease 1s infinite;
+        }
+        @keyframes border {
+            0%,100%{filter: hue-rotate(0deg);}
+            50%{filter: hue-rotate(360deg);}
+        }
+        @keyframes jump-in{
+            0%,100%{transform: scale(0) rotate(0deg);}
+            50%{transform: scale(1) rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="load-pic"></div>
+        </div>
+    </div>
+</body>
+</html>

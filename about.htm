@@ -62,9 +62,23 @@
 
                          YOU CAN ENROLL MY CREATIONS BY CLICKING <a href="#">here</a> <br>or <br>
                          GOING TO MY <a href="https://www.youtube.com/channel/UCAXSQiz51eQ367J7VJNAguQ">YOUTUBE CHANNEL</a> 
+                        <br><br>
+                        TO GET MORE INFO WRITE THE CODE HERE
+                        <br>
 
-                    
-                </p>
+                        <input  class="inp-spac" type="text" style="border: none;outline: none;padding: 10px;" placeholder="write the code here...">
+                        <button class="o-button" style="
+                            background: blue;
+                            border: none;
+                            outline: none;
+                            padding: 10px;
+                            color: white;
+                            margin: 0;
+                        ">CONFIRM</button>
+                        
+                        <p class="chan-info m-info" style="text-align: left; display: none;">
+                        </p>   
+                        </p>
             </div>
         </div>
         <div class="footer">
@@ -73,6 +87,15 @@
             <a class="email" href="digitalworldytratul@gmail.com">digitalworldytratul@gmail.com</a>
         </div>
     </section>
+    <script>
+      document.querySelector('.o-button').addEventListener('click',() => {
+        switch(document.querySelector('input').value){
+            case '856090644' : document.querySelector('.chan-info').innerHTML += '<br> <br>NAME: RATUL BANERJEE <br> CLASS: 7 <br> SECTION: Vivek <br>ROLL: 57 <br> SCHOOL: VIVEKANANDA SIKHA NIKETAN HIGHT SCHOLL <br> ADDRESS: RAGHUNATHPUR MISSION ROAD 723133 <br> PHONE: 8116012277 <br> EMAIL: ratulvaio59@gmail.com';
+            break;
+            default : document.querySelector('.chan-info').innerHTML +='<br>Incorrect code  ' + document.querySelector('input').value
+        }
+    }) 
+    </script>
     <script src="./script.js"></script>
 </body>
 </html>
