@@ -1,0 +1,108 @@
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url(../style.css);
+section{overflow: hidden;}
+.search-field{
+    background-color: aqua;
+    width: 35vw;
+    height: 60vh;
+    overflow: scroll;
+}
+.input-field{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search{
+    display: block;
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 1px solid ;
+    color:  black;
+    font-weight: bold;
+}
+.crea-options{
+    display: block;
+    padding: 0 20px;
+    height: 10vh;
+    line-height: 10vh;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.crea-options:hover{
+    background: cadetblue;
+    animation: hue linear 1s infinite;
+}
+search{display: none;}
+.closecross{
+    position: relative;
+    top: 0;
+    left: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50px;
+    width: 50px;
+    display: none;
+    overflow: visible;
+}
+.closecross .bar{
+    position: absolute;
+    top: 30px;
+    height: 5px;
+    width: 80%;
+    background: white;
+    border: .02vmin solid black;
+}
+.toggle{
+    position: relative;
+    top: 8px;
+    left: calc(90vw - 10px);
+    position: fixed;
+}
+.closecross .bar:nth-child(1){transform: rotate(45deg);}
+.closecross .bar:nth-child(2){transform: rotate(-45deg);}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+  .search-field{
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: -100%;
+      transition: .2s ease;
+      overflow-x: hidden;
+      background: linear-gradient(26deg,rgb(113, 113, 151),aqua);
+    }
+    .search-field::before{
+        content: 'SEARCH';
+        position: absolute;
+        width: 100vw;
+        height: 20vh;
+        color: white;
+        line-height: 20vh;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+        background: linear-gradient(55deg,#2a3b69,#0000ff,purple);
+    }
+    #search{
+        position: relative;
+        top: 25px;
+        width: 100vw;
+        height: 8vh;
+        background: white;
+
+        border-width: 0 0 2px 0;
+    }
+    .closecross{display: flex;}
+    .search-appear{left: 0;background-attachment: fixed;}  
+}
