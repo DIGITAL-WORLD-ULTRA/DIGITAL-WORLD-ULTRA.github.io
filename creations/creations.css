@@ -165,4 +165,8 @@ search{display: none;}
         width: 100vw;
         transform: scale(.8) translateX(-10%);
     }
+    .ficreations{
+        height: 120vh;
+    }
+    .ask-code{transform: translateY(-8vh);font-size: 20px;}
 }
