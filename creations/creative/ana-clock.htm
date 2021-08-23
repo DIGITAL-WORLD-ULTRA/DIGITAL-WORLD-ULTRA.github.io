@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOCk</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            background-color: yellowgreen;
+            overflow: hidden;
+        }
+        .clock{
+            position: relative;
+            height: 500px;
+            width: 500px;
+            background: white;
+            border-radius: 50%;
+            border-color: grey;
+            border-style: solid;
+            /* padding: 100px; */
+            border-width: 10px;
+        }
+        .clock::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            background: grey;
+            z-index: 1000000000000000000;
+        }
+        .hand.hand-hour{
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            /* border: 10px solid green; */
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            /* background: red; */
+            z-index: 100000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hand.hand-hour::before{
+            content: '';
+            transform-origin: bottom;
+            transform: translateY(-75px);
+            position: absolute;
+            /* top: 50px; */
+            height: 150px;
+            width: 40px;
+            background: red;
+            border-radius: 25px;
+            transition: 5s linear;
+        }
+
+        .hand.hand-min{
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            /* border: 10px solid green; */
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            /* background: red; */
+            z-index: 100000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hand.hand-min::before{
+            content: '';
+            transform-origin: bottom;
+            transform: translateY(-100px);
+            position: absolute;
+            /* top: 50px; */
+            height: 200px;
+            width: 30px;
+            background: yellow;
+            border-radius: 25px;
+            transition: 5s linear;
+            transition-delay: 3s;
+        }
+        
+        .hand.hand-sec{
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            /* border: 10px solid green; */
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            /* background: red; */
+            z-index: 100000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hand.hand-sec::before{
+            content: '';
+            transform-origin: bottom;
+            transform: translateY(-115px);
+            position: absolute;
+            /* top: 50px; */
+            height: 230px;
+            width: 20px;
+            background: pink;
+            border-radius: 25px;
+            transition: 5s linear;
+            transition-delay: 5s;
+        }
+        /* makeing the nums */
+        .hand.num{
+            /* hand.hand-sec{ */
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            /* border: 10px solid green; */
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            /* background: red; */
+            font-size: 40px;
+            color: green;
+            font-family: consolas;
+            text-align: center;
+            /* z-index: 100000000000000000000000; */
+            }
+            .hand.num.num-1{
+                transform: rotate(30deg);
+            }
+            .hand.num.num-2{
+                transform: rotate(60deg);
+            }
+            .hand.num.num-3{
+                transform: rotate(90deg);
+            }
+            .hand.num.num-4{
+                transform: rotate(120deg);
+            }
+            .hand.num.num-5{
+                transform: rotate(150deg);
+            }
+            .hand.num.num-6{
+                transform: rotate(180deg);
+            }
+            .hand.num.num-7{
+                transform: rotate(210deg);
+            }
+            .hand.num.num-8{
+                transform: rotate(240deg);
+            }
+            .hand.num.num-9{
+                transform: rotate(270deg);
+            }
+            .hand.num.num-10{
+                transform: rotate(300deg);
+            }
+            .hand.num.num-11{
+                transform: rotate(330deg);
+            }
+            @media screen and (max-width: 500px) {
+                body{
+                    width: 100vw;
+                    display: block;
+                }
+                .clock{
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,0%) scale(.5);
+                }
+            }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="hand num num-1">1</div>
+        <div class="hand num num-2">2</div>
+        <div class="hand num num-3">3</div>
+        <div class="hand num num-4">4</div>
+        <div class="hand num num-5">5</div>
+        <div class="hand num num-6">6</div>
+        <div class="hand num num-7">7</div>
+        <div class="hand num num-8">8</div>
+        <div class="hand num num-9">9</div>
+        <div class="hand num num-10">10</div>
+        <div class="hand num num-11">11</div>
+        <div class="hand num num-12">12</div>
+        <div class="hand num hand-hour"></div>
+        <div class="hand num hand-min"></div>
+        <div class="hand num hand-sec"></div>
+    </div>
+    <script src="./clack.js"></script>
+</body>
+</html>

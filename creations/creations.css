@@ -1,12 +1,15 @@
-@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
 @import url(../style.css);
-section{overflow: hidden;}
+/* html{scroll-behavior: smooth;} */
+
+section{overflow: hidden;height: 100vh;}
 .search-field{
     background-color: aqua;
+    background: linear-gradient(26deg,rgb(113, 113, 151),aqua);
     width: 35vw;
     height: 60vh;
     overflow: scroll;
 }
+
 .input-field{
     height: 20vh;
     display: flex;
@@ -29,8 +32,11 @@ section{overflow: hidden;}
     height: 10vh;
     line-height: 10vh;
     border-bottom: 1px solid black;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
+    color: black;
+    transition: .2s linear;
+    text-decoration: none;
 }
 .crea-options:hover{
     background: cadetblue;
@@ -66,10 +72,47 @@ search{display: none;}
 }
 .closecross .bar:nth-child(1){transform: rotate(45deg);}
 .closecross .bar:nth-child(2){transform: rotate(-45deg);}
-
-
-
-
+.main-container{
+    height: 60vh;
+    width: 65vw;
+    background-color: #ccc;
+    transform: translateX(35vw) translateY(-100%);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.grey{
+    background-color: #ccc;
+}
+.ficreations{
+    height: 80vh;
+    padding: 15px 30px;
+    border-bottom: 2px solid grey;
+    overflow: hidden;
+}
+.creation-name{
+    color: brown;
+    text-align: center;
+    font-size: 35px;
+    -webkit-text-stroke: 1px #add8e6;
+    text-decoration: underline brown;
+}
+.creation-frame{
+    display: block;
+    position: relative;
+    background: #fff;
+    height: 100vh;
+    width: 100vw;
+    transform: scale(.4) translateY(-50%);
+    left: -32%;
+    outline: none;
+    border: none;
+}
+.ask-code{
+    color: grey;
+    font-weight: lighter;
+    font-size: 30px;
+    transform: translateY(-40vh);
+}
 
 @media screen and (max-width: 500px) {
   .search-field{
@@ -78,8 +121,9 @@ search{display: none;}
       width: 100vw;
       top: 0;
       left: -100%;
-      transition: .2s ease;
+      transition: .6s ease;
       overflow-x: hidden;
+      z-index: 100;
       background: linear-gradient(26deg,rgb(113, 113, 151),aqua);
     }
     .search-field::before{
@@ -92,17 +136,34 @@ search{display: none;}
         font-weight: bold;
         text-align: center;
         font-size: 40px;
+        opacity: .5;
         background: linear-gradient(55deg,#2a3b69,#0000ff,purple);
     }
     #search{
         position: relative;
         top: 25px;
         width: 100vw;
-        height: 8vh;
+        height: 50px;
         background: white;
 
         border-width: 0 0 2px 0;
     }
     .closecross{display: flex;}
     .search-appear{left: 0;background-attachment: fixed;}  
+    .main-container{
+        transform: translateZ(10px);
+        width: 100vw;
+        height: 70vh;
+    }
+    .creation-frame{
+        --wi: calc(100vw/8);
+        --ab: calc(100vw - var(--wi));
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        transform: scale(.8) translateX(-10%);
+    }
 }

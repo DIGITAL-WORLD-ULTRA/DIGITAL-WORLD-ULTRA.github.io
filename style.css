@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@300;500;600;900&family=Roboto+Mono&display=swap'); 
+
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: sans-serif,'poppins';
     box-sizing: border-box;
+    font-weight: lighter;
 }
+.code-container{font-family: consolas,'Fira code';}
+h1,h2,h3,h4,h5,h6{font-weight: bold;}
 .chan-infogg{
     color: red;
 }
+code{font-family: roboto-mono;}
 *::-webkit-scrollbar{width: 5px;background: transparent;background-size: 100% 100%;}
 *::-webkit-scrollbar-thumb{background: black;border: 1px solid white;}
 section{overflow-x: hidden;}
