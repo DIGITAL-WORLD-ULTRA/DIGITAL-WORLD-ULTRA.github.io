@@ -3,7 +3,6 @@
 
 section{overflow: hidden;height: 100vh;}
 .search-field{
-    background-color: aqua;
     background: linear-gradient(26deg,rgb(113, 113, 151),aqua);
     width: 35vw;
     height: 60vh;
