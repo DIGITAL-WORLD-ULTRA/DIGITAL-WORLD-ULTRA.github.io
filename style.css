@@ -276,7 +276,7 @@ section{overflow-x: hidden;}
     .links{
         position: fixed;
         display: block;
-        background: red;
+        background: linear-gradient(55deg,coral,orange,red);
         top: 0;
         left: -100%;
         height: 100vh;
