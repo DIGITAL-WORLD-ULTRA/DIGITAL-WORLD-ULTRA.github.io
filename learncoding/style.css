@@ -1,1 +1,62 @@
 @import url('../style.css');
+@import url('../creations/creations.css');
+*{font-family: consolas,'Fira code';}
+.flex-box-arr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80vh;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+}
+.code-prev{
+    width: 50vw;
+    margin: auto;
+}
+.learn{
+    display: inline-block;
+    font-size: 30px;
+    /* overflow-x: hidden; */
+    position: relative;
+    color: black;
+    text-decoration: none;
+    padding: 0 10px;
+}
+.learn::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: black;
+    top: -5px;
+    opacity: 0;
+    left: -100%;
+    transition: .2s ease;
+}
+.learn::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: black;
+    bottom: -5px;
+    right: -100%;
+    opacity: 0;
+    transition: .2s ease;
+}
+.learn:hover::after{right: 0;opacity: 1;}
+.learn:hover::before{left: 0;opacity: 1;}
+.learn:hover {color: green;}
+
+@media screen and (max-width: 500px){
+    .code-prev{
+        width: 90vw;
+    }
+    .learn{
+        font-size: 20px;
+    }
+}

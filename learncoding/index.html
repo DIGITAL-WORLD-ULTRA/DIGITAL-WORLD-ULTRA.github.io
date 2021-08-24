@@ -4,12 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.addEventListener('load',() => document.querySelector('.preloader').style.transform = 'translateY(-100vh)')
+    </script>
+    <script src="../modules/phrism/prism.js"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../modules/phrism/prism.css">
     <title>CODE || DIGITAL_WORLD</title>
 </head>
 <body>
-    <section>
-
+    <div class="preloader">
+        <div class="loader">
+            <div class="load-pic"></div>
+        </div>
+    </div>
+    <section style="overflow-y: scroll;">
+        <div class="head-part">
+            <h1>LEARN CODING</h1>
+            <h4 class="sec comment">&lt;-- by RATUL BANERJEE --&gt;</h4>
+        </div>
+        <div class="featues">
+            <h1 class="body-main">WEB-DEVLOPMENT</h1><hr><hr>
+            <div class="features grey">
+            <h1 class="body-main" style="text-decoration: underline green;">HTML</h1>
+            <div class="code-def">
+                <div class="code-prev">
+                    <pre class="language-html">
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;FIRST HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;FIRST HTML&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;                     
+                        </code>
+                    </pre>
+                </div>
+                <p class="chan-info">MARKUP LANGUAGE USED TO BUILD WEBPAGES</p>
+                <div class="center"><a href="./html" class="learn">LEARN</a></div>
+            </div>
+        </div>
+        <div class="features grey">
+            <h1 class="body-main">CSS</h1>
+            <div class="code-def">
+                <div class="code-prev">
+                    <pre class="language-css">
+                        <code>
+a{
+    text-decoration: none;
+    color: red;
+    background: white;
+    font-weight: 700;
+    /*Language of styling*/
+}
+                        </code>
+                    </pre>
+                </div>
+                <p class="chan-info">STYLE SHEET TO STYLE WEB PAGES</p>
+                <div class="center"><a href="./css" class="learn">LEARN</a></div>
+            </div>
+            <hr>
+        <div class="features grey">
+            <h1 class="body-main">JAVASCRIPT</h1>
+            <div class="code-def">
+                <div class="code-prev">
+                    <pre class="language-js">
+                        <code>
+function click(){
+    document.getElementById('btn').style.color = "red";
+    document.getElementById('btn1').style.color = "blue";
+    document.getElementById('btn2').style.color = "green";
+    console.log('done')
+}
+                        </code>
+                    </pre>
+                </div>
+                <p class="chan-info">LANGUAGE TO GIVE LOGICS TO WEBPAGES</p>
+                <div class="center"><a href="./js" class="learn">LEARN</a></div>
+            </div>
+        </div>
+        </div>
     </section>
 </body>
 </html>
