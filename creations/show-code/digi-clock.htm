@@ -8,7 +8,8 @@
     <script>
         window.addEventListener('load',() => {
             document.querySelector('.preloader').style.transform = 'translateY(-100vh)';
-        })
+        });
+       
     </script>
     <link rel="stylesheet" href="./phrism/prism.css">
     <title>CODE A DIGITAL CLOCK USING HTML CSS JS || DIGITAL WORLD</title>
@@ -17,6 +18,7 @@
         #centerdiv{
             margin: 0 32vw;
         }
+        .commnet{font-family: consolas,'Fira code';}
         #vid{
             display: block;
             height: 300px;
@@ -52,7 +54,6 @@
     &lt;meta charset="UTF-8"&gt;
     &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;link rel="stylesheet" href="../creations.css"&gt;
     &lt;title&gt;DIGITAL CLOCK __ DIGITAL WORLD&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -94,10 +95,10 @@ var clock = () =&gt; {
     let m = d.getMinutes();
     let s = d.getSeconds();
     let am = 'AM';
+    if(h &gt; 12){h = h - 12;am = 'PM'}
     h = h&lt;10 ? '0' + h:h;
     m = m&lt;10 ? '0' + m:m;
     s = s&lt;10 ? '0' + s:s;
-    if(h &gt; 12){h = h - 12;am = 'PM'}
     let time = h + ':' + m + ':' + s + ' ' + am;
     document.querySelector('.clock').innerHTML =time;
     setTimeout(clock,1000)

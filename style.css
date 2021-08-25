@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@300;500;600;900&family=Roboto+Mono&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('./learncoding/style.css');
+
 *{
     margin: 0;
     padding: 0;
     font-family: sans-serif,'poppins';
     box-sizing: border-box;
     font-weight: lighter;
+    scroll-behavior: smooth;
 }
 .code-container{font-family: consolas,'Fira code';}
 h1,h2,h3,h4,h5,h6{font-weight: bold;}
@@ -184,7 +187,8 @@ section{overflow-x: hidden;}
 .img{
     height: 90vh;
     width: 35vw;
-    background: url(./imgs/web.png);
+    background-color: green;
+    background-image: url(https://source.unsplash.com/featured?nvidia);
     background-size: cover;
     background-position: center;
 }
@@ -371,4 +375,36 @@ section{overflow-x: hidden;}
 }
 @media screen and (max-width: 1000px) and (min-width: 500px) {
     .navbar{padding: 0 20vw 0 0;}
+}
+.big-buttons{
+    display: none;
+}
+@media screen and (min-width: 900px){
+    .main-home-head{
+        height: 100vh;
+        background-color: #333030;
+        background-image: url('./imgs/web.png');
+        background-size: 100% 100%;
+        background-blend-mode: multiply;
+    }
+    .main-home-head h1{
+        line-height: 85vh;
+    }
+    .main-comm{
+        margin: -35vh 0;
+    }
+    .big-buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 20vh;
+        margin-top: 45vh;
+    }
+    .big-buttons a{
+        font-size: 25px;
+        color: white;
+    }
+    .big-buttons a::after,.big-buttons a::before{
+        background: white;
+    }
 }

@@ -23,7 +23,7 @@
     </style>
 </head>
 <body>
-    <section>
+    <section style="overflow-y:scroll;">
         <h1 class="clock"></h1>
     </section>
     <script>
@@ -33,10 +33,10 @@
             let m = d.getMinutes();
             let s = d.getSeconds();
             let am = 'AM';
+            if(h > 12){h = h - 12;am = 'PM'}
             h = h<10 ? '0' + h:h;
             m = m<10 ? '0' + m:m;
             s = s<10 ? '0' + s:s;
-            if(h > 12){h = h - 12;am = 'PM'}
             let time = h + ':' + m + ':' + s + ' ' + am;
             document.querySelector('.clock').innerHTML =time;
             setTimeout(clock,1000)
