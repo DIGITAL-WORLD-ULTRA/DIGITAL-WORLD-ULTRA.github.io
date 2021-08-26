@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../creations.css">
+    <script>
+        window.addEventListener('load',() => {
+            document.querySelector('.preloader').style.transform = 'translateY(-100vh)';
+        });
+       
+    </script>
+    <link rel="stylesheet" href="./phrism/prism.css">
+    <title>CODE A DIGITAL CLOCK USING HTML CSS JS || DIGITAL WORLD</title>
+    <style>
+        *{font-family: consolas,'Fira code';}
+        #centerdiv{
+            margin: 0 32vw;
+        }
+        .commnet{font-family: consolas,'Fira code';}
+        #vid{
+            display: block;
+            height: 300px;
+            width: 500px;
+            margin: auto;
+        }
+        @media screen and (max-width: 500px) {
+            #centerdiv{margin: 0 8vw;}
+            #vid{height: 150px;width: 300px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="load-pic"></div>
+        </div>
+    </div>
+    <section style="overflow-y: scroll;">
+        <div class="head-part">
+            <h1>DIGITAL CLOCK</h1>
+            <h4 class="sec comment">&lt;!-- source code --&gt;</h4>
+        </div>
+        <div class="features grey code-part">
+            <h1 class="body-main">PREVIEW</h1>
+            <img src="../../videos/ezgif-1-772a8ea442ab.gif" loop controls class="creation-frame" id="centerdiv" frameborder="0"></img>
+            <h1 class="body-main">PYTHON</h1>
+            <div class="code-container">
+                <pre class="language-python" style="font-family: consolas,'Fira code';"><code>
+import turtle
+
+turtle.bgcolor('black')
+turtle.pencolor('lightgreen')
+turtle.color('lightgreen')
+
+turtle.lt(90)
+def ford():
+    turtle.fd(100)
+def back():
+    turtle.bk(100)
+def right():
+    turtle.rt(90)
+def left():
+    turtle.lt(90)
+
+turtle.onkeypress(ford,"Up")
+turtle.onkeypress(back,"Down")
+turtle.onkeypress(right,"Right")
+turtle.onkeypress(left,"Left")
+
+turtle.listen()
+turtle.mainloop()
+                </code></pre>
+            
+        <h1 class="body-main">VIDEO TUTORIAL</h1>
+        <iframe  id="vid"  src="https://www.youtube.com/embed/RfRYCaHWZXg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+        
+        </div>
+    </section>
+    <script src="./phrism/prism.js"></script>
+</body>
+</html>
