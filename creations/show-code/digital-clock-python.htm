@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../creations.css">
+    <script>
+        window.addEventListener('load',() => {
+            document.querySelector('.preloader').style.transform = 'translateY(-100vh)';
+        });
+       
+    </script>
+    <link rel="stylesheet" href="./phrism/prism.css">
+    <title>CODE A DIGITAL CLOCK USING HTML CSS JS || DIGITAL WORLD</title>
+    <style>
+        *{font-family: consolas,'Fira code';}
+        #centerdiv{
+            margin: 0 32vw;
+        }
+        .commnet{font-family: consolas,'Fira code';}
+        #vid{
+            display: block;
+            height: 300px;
+            width: 500px;
+            margin: auto;
+        }
+        @media screen and (max-width: 500px) {
+            #centerdiv{margin: 0 8vw;}
+            #vid{height: 150px;width: 300px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="load-pic"></div>
+        </div>
+    </div>
+    <section style="overflow-y: scroll;">
+        <div class="head-part">
+            <h1>DIGITAL CLOCK</h1>
+            <h4 class="sec comment">&lt;!-- source code --&gt;</h4>
+        </div>
+        <div class="features grey code-part">
+            <div class="creation-frame" id="centerdiv" style="display: grid;place-items: center;background: transparent;">
+                <img src="../../videos/ezgif-1-ffda6afda18e.gif" style="width: 100%;" alt="" srcset="">
+            </div>
+            <h1 class="body-main">PYTHON</h1>
+        <pre class="language-python"><code>
+/*
+
+    DIGITAL CLOCK
+    ______________________________________________________________________
+
+*/
+
+var clock = () =&gt; {
+    let d = new Date();
+    let h = d.getHours();
+    let m = d.getMinutes();
+    let s = d.getSeconds();
+    let am = 'AM';
+    if(h &gt; 12){h = h - 12;am = 'PM'}
+    h = h&lt;10 ? '0' + h:h;
+    m = m&lt;10 ? '0' + m:m;
+    s = s&lt;10 ? '0' + s:s;
+    let time = h + ':' + m + ':' + s + ' ' + am;
+    document.querySelector('.clock').innerHTML =time;
+    setTimeout(clock,1000)
+}
+clock()
+
+        </code></pre>    
+        <h1 class="body-main">VIDEO TUTORIAL</h1>
+        <iframe  id="vid"  src="https://www.youtube.com/embed/RfRYCaHWZXg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+        
+        </div>
+    </section>
+    <script src="./phrism/prism.js"></script>
+</body>
+</html>
