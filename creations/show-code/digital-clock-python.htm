@@ -48,28 +48,24 @@
             </div>
             <h1 class="body-main">PYTHON</h1>
         <pre class="language-python"><code>
-/*
 
-    DIGITAL CLOCK
-    ______________________________________________________________________
+from tkinter import *
+from tkinter.ttk import *
+from time import strftime
 
-*/
+root = Tk()
+root.title('digital clock')
 
-var clock = () =&gt; {
-    let d = new Date();
-    let h = d.getHours();
-    let m = d.getMinutes();
-    let s = d.getSeconds();
-    let am = 'AM';
-    if(h &gt; 12){h = h - 12;am = 'PM'}
-    h = h&lt;10 ? '0' + h:h;
-    m = m&lt;10 ? '0' + m:m;
-    s = s&lt;10 ? '0' + s:s;
-    let time = h + ':' + m + ':' + s + ' ' + am;
-    document.querySelector('.clock').innerHTML =time;
-    setTimeout(clock,1000)
-}
-clock()
+def  time():
+    string = strftime('%H:%M:%S %p')
+    label.config(text=string)
+    label.after(1000,time)
+
+label = Label(root,font=('consolas',80),background='black',foreground='cyan')
+label.pack(anchor='center')
+
+time()
+mainloop()
 
         </code></pre>    
         <h1 class="body-main">VIDEO TUTORIAL</h1>
