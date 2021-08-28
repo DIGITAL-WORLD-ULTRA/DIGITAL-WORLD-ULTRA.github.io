@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../creations.css">
+    <script>
+        window.addEventListener('load',() => {
+            document.querySelector('.preloader').style.transform = 'translateY(-100vh)';
+        });
+       
+    </script>
+    <link rel="stylesheet" href="./phrism/prism.css">
+    <title>CODE A IMAGE SEARCH MENU USING HTML CSS JS || DIGITAL WORLD</title>
+    <style>
+        *{font-family: consolas,'Fira code';}
+        #centerdiv{
+            margin: 0 32vw;
+        }
+        .commnet{font-family: consolas,'Fira code';}
+        #vid{
+            display: block;
+            height: 300px;
+            width: 500px;
+            margin: auto;
+        }
+        @media screen and (max-width: 500px) {
+            #centerdiv{margin: 0 8vw;}
+            #vid{height: 150px;width: 300px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="load-pic"></div>
+        </div>
+    </div>
+    <section style="overflow-y: scroll;">
+        <div class="head-part">
+            <h1>DIGITAL CLOCK</h1>
+            <h4 class="sec comment">&lt;!-- source code --&gt;</h4>
+        </div>
+        <div class="features grey code-part">
+            <h1 class="body-main">PREVIEW</h1>
+            <iframe src="../creative/image-search.htm" class="creation-frame" id="centerdiv" frameborder="0"></iframe>
+            <h1 class="body-main">HTML</h1>
+            <div class="code-container">
+                <pre class="language-html" style="font-family: consolas,'Fira code';"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;IMAGE PREVIEW&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="text" onkeyup="img()"&gt;
+    &lt;img src="https://source.unsplash.com/1300x600/?earth" alt=""&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                                </code></pre>
+            <h1 class="body-main">CSS</h1>
+            <pre class="language-css"><code>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: teal;
+}
+input{
+    display: block;
+    height: 80px;
+    width: 90vw;
+    margin: 0 auto;
+}
+img{display: block;margin: auto;}
+
+            </code></pre>
+        <h1 class="body-main">JAVSCRIPT</h1>
+        <pre class="language-js"><code>
+/*
+
+    IMAGE SEARCH
+    ______________________________________________________________________
+
+*/
+
+const img = () =>{
+    let name = document.querySelector("input").value;
+    let url = "https://source.unsplash.com/1300x600/?";
+    let img = document.querySelector("img");
+    img.src = url + name;
+}
+        </code></pre>    
+        <h1 class="body-main">VIDEO TUTORIAL</h1>
+        <iframe id="vid" src="https://www.youtube.com/embed/fwSXCOErRsI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+    </div>
+        
+        </div>
+    </section>
+    <script src="./phrism/prism.js"></script>
+</body>
+</html>
