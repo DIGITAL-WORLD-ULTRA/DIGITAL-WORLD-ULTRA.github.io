@@ -249,8 +249,15 @@ section{overflow-x: hidden;}
     text-align: center;
     text-decoration: none;
 }
-
-
+.cross{
+    overflow: visible;
+    transform: translateY(5px);
+}
+.cross .bar{width: 30px;background: red;height: 5px;}
+.cross .bar:nth-child(1){transform: rotate(45deg);}
+.cross .bar:nth-child(3){transform: rotate(-45deg);}
+.cross .bar:nth-child(2){opacity: 0;}
+.cross .bar{position: absolute;}
 
 
 
@@ -301,14 +308,7 @@ section{overflow-x: hidden;}
     .cross .bar{
         position: absolute;
     }
-    .cross{
-        overflow: visible;
-        transform: translateY(10px);
-    }
-    .cross .bar{width: 30px;background: red;height: 5px;}
-    .cross .bar:nth-child(1){transform: rotate(45deg);}
-    .cross .bar:nth-child(3){transform: rotate(-45deg);}
-    .cross .bar:nth-child(2){opacity: 0;}
+    
     .links ul{flex-direction: column;}
     .links::before{
         content: 'RATUL';

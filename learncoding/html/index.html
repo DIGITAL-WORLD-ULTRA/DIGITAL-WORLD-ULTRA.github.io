@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML TUTORIAL || LEARN HTML || DEVLOP WEBPAGES || DIGITAL WORLD</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../codemirror/codemirror-5.62.3/lib/codemirror.css">
+    <link rel="stylesheet" href="../../codemirror/codemirror-5.62.3/theme/monokai.css">
+    <link rel="stylesheet" href="../../modules/phrism/prism.css">
+</head>
+<body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="load-pic"></div>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="navlogo"></div>
+        <div class="toggle" style="display: flex;">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div class="editor" id="edit-1">
+        <div class="edit-nav">
+            <div class="navlogo editlogo"></div>
+            <button class="runbutton" >RUN</button>
+            <div class="cross editorcrs" onclick="hidecode()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div class="textarea">
+            <textarea id="edit1editor">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a Heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+        </div>
+        <div class="result-previ"></div>
+    </div>
+    <section style="overflow-y: scroll;">
+        <div class="head-part">
+            <h1>LEARN HTML</h1>
+            <h4 class="sec comment">&lt;-- A SIMPLE MARKUP LANGUAGE --&gt;</h4>
+        </div>
+        <div class="body-part">
+            <h1 class="body-main">INTRODUCTION</h1><hr><br><br>
+            
+            <h1 class="body-main secondary">WHAT IS HTML?</h1>
+            <br>
+            <ul>
+    <li>HTML is the standard markup language for creating Web pages.</li>
+    <li>HTML stands for Hyper Text Markup Language</li>
+    <li>HTML is the standard markup language for creating Web pages</li>
+    <li>HTML describes the structure of a Web page</li>
+    <li>HTML consists of a series of elements</li>
+    <li>HTML elements tell the browser how to display the content</li>
+    <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
+</ul>
+<h1 class="body-main secondary">A Simple HTML Document</h1>
+<div class="self">
+    <div class="self-prev">
+        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a Heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+    <a href="#" class="learn" onclick="opencode()">TRY IT YOURSELF!</a>
+</div>         
+</div>
+    </section>
+    <script src="../script.js"></script>
+    <script src="../../codemirror/codemirror-5.62.3/lib/codemirror.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.js"></script>
+    <script src="../../codemirror/codemirror-5.62.3/mode/xml/xml.js"></script>
+    <script src="../../modules/phrism/prism.js"></script>
+    <script>
+        'use strict'
+        
+        var htmleditor = document.querySelector('#edit1editor');
+        var run = document.querySelector('.runbutton');
+        
+       
+        if(innerWidth > 500){
+            var edi = new CodeMirror.fromTextArea(htmleditor,{
+            lineNumbers: true,
+            mode: 'xml',
+            theme: 'monokai'
+        })
+        }else{
+            var edi = new CodeMirror.fromTextArea(htmleditor,{
+            lineNumbers: false,
+            mode: 'xml',
+            theme: 'monokai'
+        })
+        }
+        
+        setTimeout(() => {
+            run.addEventListener('click',() => {
+            document.querySelector('.result-previ').innerHTML = edi.getValue()
+        }),300
+        })
+        
+    </script>
+</body>
+
+
+</html>

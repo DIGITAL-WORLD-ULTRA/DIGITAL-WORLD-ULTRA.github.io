@@ -52,11 +52,137 @@
 .learn:hover::before{left: 0;opacity: 1;}
 .learn:hover {color: green;}
 
+.editor{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transform: scale(0);
+    height: 100vh;
+    width: 100vw;
+    background-color: #008b7f;
+    z-index: 100000000;
+    transition: .5s ease;
+}
+.opened-code{
+    left: 0;
+    transform: scale(1);
+}
+
+.secondary{
+    font-size: 5vh;
+    text-align: left;
+    margin: auto;
+    width: 90vw;
+    color: Black;
+    font-weight: lighter;
+    -webkit-text-stroke: 0px black;
+}
+.self{
+    height: 50vh;
+    width: 50vw;
+    background: #6d956da8;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 50px 20px 0 5vw;
+}
+.self-prev{
+    font-size: 13px;
+    width: 95%;
+    margin: auto;
+}
+.self .learn{
+    font-size: 20px;
+    margin:  10px 10px;
+}
+
+
+.editor .textarea{
+    display: block;
+    border: none;
+    outline: none;
+    resize: none;
+    height: 35vh;
+    width: 90vw;
+    background: #002;
+    margin: 10px auto;
+    overflow-y: scroll;
+}
+.edit-nav{
+    position: relative;
+    background: #001;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px 0 50px;
+    height: 5vh;
+}
+.editorcrs{
+    transform: translateY(-2px);
+}
+.runbutton{
+    outline: none;
+    height: 5vh;
+    width: 15%;
+    font-size: 20px;
+    border: 1px solid #21eb21;
+    background: transparent;
+    color: #21eb21;
+    font-weight: bold;
+    position: relative;
+}
+.runbutton::before{
+    content: 'RUN';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateY(-100%);
+    background: #21eb21;
+    color: black;
+    display: grid;
+    transition: .2s ease;
+    place-items: center;
+}
+.runbutton:hover::before{
+    transform: translateY(0);
+}
+.result-previ{
+    height: 45vh;
+    width: 90vw;
+    background: #fff;
+    margin: 35px auto;
+    display: block;
+    overflow: scroll;
+}
+ul{
+    padding: 0 100px;
+}
+
+
+
 @media screen and (max-width: 500px){
+    .runbutton{
+        width: 25%;
+    }
     .code-prev{
         width: 90vw;
     }
     .learn{
         font-size: 20px;
+    }
+    .self{
+        height: 70vh;
+        width: 90vw;
+        margin: 20px auto;
+    }
+    .secondary{
+        font-size: 20px;
+    }
+    ul{
+        padding: 20px;
+    }
+    li{
+        font-size: 15px;
     }
 }
