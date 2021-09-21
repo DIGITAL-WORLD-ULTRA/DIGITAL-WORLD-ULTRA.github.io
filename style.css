@@ -259,6 +259,19 @@ section{overflow-x: hidden;}
 .cross .bar:nth-child(2){opacity: 0;}
 .cross .bar{position: absolute;}
 
+.slideshow{
+    height: 30vh;
+    width: 80vw;
+    display: flex;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slide-show img{
+    display: block;
+    height: 30vh;
+    width: 30vh;
+}
 
 
 
